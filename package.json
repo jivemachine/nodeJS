@@ -1,0 +1,19 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "NodeJs mini project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jivemachine/nodeJS.git"
+  },
+  "author": "Jeremy Cobb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jivemachine/nodeJS/issues"
+  },
+  "homepage": "https://github.com/jivemachine/nodeJS#readme"
+}
