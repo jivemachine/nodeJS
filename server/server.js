@@ -1,19 +1,37 @@
+// importing modules
 const path = require('path');
 const fs = require('fs');
-
 const request = require('request');
 
-let dataPath = path.join(__dirname, '../chirps.js');
+// setting data path
+let dataPath = path.join(__dirname, '../chirps.json');
 
-let arr = [
-    "1chirp", "2chip", "3chirp", " 4chirp", "5chirp"
-];
+// creating array of 5 chirp objects object
+let chirpObj = [
+    {
+        "chirp": "chirp one"
+    },
+    {
+        "chirp": "chirp two"
+    },
+    {
+        "chirp": "chirp three"
+    },
+    {
+        "chirp": "chirp four"
+    },
+    {
+        "chirp": "chirp five"
+    }
+]
+
+// writing object to chirps.json 
 
 let file = fs.createWriteStream(dataPath);
 file.on('error', err => {
     console.log(err);
 });
-arr.forEach(function(w) {
-    file.write(w + '\n');
+chirpObj.forEach(function (chirps) {
+    file.write(chirps.chirp + '\n');
 });
 file.end();
