@@ -1,16 +1,12 @@
 // import modules
 const rp = require('request-promise');
 
+// pull JSON data from app 
 rp('https://lukes-projects.herokuapp.com/v1/hiphop')
-    .then(function (htmlString) {
-        // console.log(body[0].title);
-        console.log(htmlString);
+    .then(function (data) {
+        let albums = JSON.parse(data);
+        console.log(albums.result[0].title);
     })
     .catch(function (err) {
         console.log(err);
     });
-
-
-    // JSON.parse(body).data.children.forEach(item => {
-    //     fs.appendFileSync(dataPath, item.data.title + '\n');
-    // });
