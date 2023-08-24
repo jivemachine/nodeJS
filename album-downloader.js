@@ -24,11 +24,24 @@ rp('https://lukes-projects.herokuapp.com/v1/hiphop')
 
             let link = albumsData.result[i].thumbnail_image;
 
+            // open div
+            let divOpen = "<div style='display: block; margin-left: auto; margin-right: auto; border: 1px solid #ddd; border-radius: 4px; padding: 5px; width: 150px;'>";
+
             // save thumbnail img
-            let img = '<a href="' + link + '"><img style="display: block; margin-left: auto; margin-right: auto; border: 1px solid #ddd; border-radius: 4px; padding: 5px; width: 150px;" src="'+link+'"></img></a>';
+            let img = '<a href="' + link + '"><img src="'+link+'"></img></a>';
+
+            // add button at botton of img
+            let btn = "<button>Buy Album Here!</button>";
+            
+            // close div
+            let divClose = "</div>";
+
+            let download = divOpen + img + btn + divClose;
 
             // // write img to html file
-            fs.appendFileSync(dataPath, img);
+            fs.appendFileSync(dataPath, download);
+
+            // button that links to amazon page where you can buy album
         }
     })
     .catch(function (err) {
