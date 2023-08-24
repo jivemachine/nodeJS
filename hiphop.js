@@ -32,31 +32,6 @@ rp('https://lukes-projects.herokuapp.com/v1/hiphop')
         for(let i = 0; i < numAlbums; i++) {
             fs.appendFileSync(dataPath, album[i] + '\n');
         };
-        
-
-        // check if dataPath exists
-        // try {
-        //     if (fs.existsSync(dataPath)) {
-        //         fs.appendFileSync(dataPath, album[i], err => {
-        //             if (err) console.log(err);
-        //         })
-        //     } else {
-        //         fs.writeFile('favorite-albums.json', album[i], err => {
-        //             if (err) console.log(err);
-        //         });
-        //     }
-        // } catch (err) {
-        //     console.log(err);
-        // }
-
-        // writing albums to 'favorite-albums.json' file
-        // let dataPath = path.join(__dirname, 'favorite-albums.json');
-        // fs.writeFile('favorite-albums.json', err => {
-        //     if (err) console.log(err);
-        // });
-
-        // fs.appendFileSync(dataPath, item.data.title + '\n');
-
     })
     .catch(function (err) {
         console.log(err);
