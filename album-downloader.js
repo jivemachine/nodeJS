@@ -25,7 +25,7 @@ rp('https://lukes-projects.herokuapp.com/v1/hiphop')
             let link = albumsData.result[i].thumbnail_image;
 
             // save thumbnail img
-            let img = '<a href="' + link + '"><img style="border: 1px solid #ddd; border-radius: 4px; padding: 5px; width: 150px;" src="'+link+'"></img></a>';
+            let img = '<a href="' + link + '"><img style="display: block; margin-left: auto; margin-right: auto; border: 1px solid #ddd; border-radius: 4px; padding: 5px; width: 150px;" src="'+link+'"></img></a>';
 
             // // write img to html file
             fs.appendFileSync(dataPath, img);
